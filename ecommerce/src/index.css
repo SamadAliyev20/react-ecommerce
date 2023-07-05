@@ -7,3 +7,17 @@
 body{
     font-family: 'Nunito', sans-serif;
 }
+.paginate{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.paginate li{
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(159, 159,159);
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

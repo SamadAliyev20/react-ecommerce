@@ -6,13 +6,23 @@ const Category = () => {
     const dispatch = useDispatch();
     const {categories} = useSelector(state =>state.categories)
 
+    console.log(categories, 'categories');
     
     useEffect(() => {
       dispatch(getCategories())
     }, [dispatch])
     
   return (
-    <div className='bg-gray-100 w-1/6'>Category</div>
+    <div className='bg-gray-100 w-1/6 p-4'>
+        <div className='border-b pb-1 text-xl font-bold px-2'>
+            Category
+        </div>
+        {
+            categories?.map((category,i) =>{
+               return <div className='text-lg  cursor-pointer hover:bg-gray-200 p-2' key={i}>{category}</div>  
+            })
+        }
+    </div>
   )
 }
 
