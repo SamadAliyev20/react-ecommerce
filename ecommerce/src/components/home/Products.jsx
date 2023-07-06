@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getProducts } from '../../redux/slices/productSlice';
+import { getCategoryProduct, getProducts, getsortByProduct } from '../../redux/slices/productSlice';
 import Loading from '../Loading';
 import Product from './Product';
 import ReactPaginate from 'react-paginate';
 
-const Products = () => {
+const Products = ({category,sort}) => {
   const dispatch = useDispatch();
   const {products,productStatus} = useSelector(state =>state.products)
 
@@ -27,10 +27,17 @@ const Products = () => {
 
 
 
-
   useEffect(() =>{
-  dispatch(getProducts())
-  },[dispatch])
+    if(category){
+      dispatch(getCategoryProduct(category))
+    }
+    if(sort){
+      dispatch(getsortByProduct(sort))
+    }
+    else{
+      dispatch(getProducts())
+    }
+  },[dispatch,category,sort])
   return (
     <div>
       {

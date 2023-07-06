@@ -5,7 +5,6 @@ const SliderComp = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
   };

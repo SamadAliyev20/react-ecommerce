@@ -3,7 +3,7 @@ import Skeleton from '@mui/material/Skeleton';
 const Loading = () => {
   return (
    <>
-    <Skeleton variant="rectangular" width={460} height={460} />
+    <Skeleton variant="rectangular" width={200} height={200} />
    </>
   )
 }
