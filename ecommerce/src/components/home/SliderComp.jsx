@@ -13,9 +13,7 @@ const SliderComp = () => {
       <Slider {...settings}>
         <div className="!flex items-center bg-gray-100 px-6">
           <div>
-            <div className="text-6xl font-bold">
-              En kaliteli ayakkabılar burada
-            </div>
+            <div className="text-6xl font-bold">Top quality shoes are here</div>
             <div className="text-lg my-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Recusandae ipsam aspernatur doloremque consequuntur voluptas
